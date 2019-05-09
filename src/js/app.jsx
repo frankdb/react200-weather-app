@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Header from './components/Header';
 import Search from './components/Search';
 import CityInformation from './components/CityInformation';
 import SearchHistory from './components/SearchHistory'
@@ -9,7 +8,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div className='container'>
-        <Header />
+        <div style={{ backgroundColor: 'grey', padding: '20px', marginTop: '20px' }}>
+          <h1>Frank's Weather App</h1>
+          <h4>It's getting hot in here...</h4>
+        </div>
 
         <Search />
 
