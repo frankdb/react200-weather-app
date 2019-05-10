@@ -1,6 +1,6 @@
 # React 200 Weather App
 
-This app grabs the weather for a city using the Open Weather API. It uses React and Redux for state management. Bootstrap is used for styling.
+This app grabs the weather for a city using the Open Weather API. It uses React and Redux for state management. Bootstrap is used for styling. You can visit the page on: https://fb-react200-weatherapp.herokuapp.com/
 
 ## Getting Started
 
