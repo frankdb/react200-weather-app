@@ -6,13 +6,13 @@ const initialState = {
   temp: 0,
   pressure: 0,
   humidity: 0,
-  Lowtemp: 0,
-  Hightemp: 0,
-  Wind: 0,
+  lowTemp: 0,
+  highTemp: 0,
+  wind: 0,
   searchInput: '',
-  searchedCity: 'New York',
+  searchedCity: 'Enter a city',
   history: [],
-  icon: ''
+  icon: '01d'
 };
 
 export default function searchReducer(state = initialState, action) {
@@ -29,9 +29,9 @@ export default function searchReducer(state = initialState, action) {
         temp: payload.data.main.temp.toFixed(0),
         pressure: payload.data.main.pressure,
         humidity: payload.data.main.humidity,
-        Lowtemp: payload.data.main.temp_min.toFixed(0),
-        Hightemp: payload.data.main.temp_max.toFixed(0),
-        Wind: payload.data.wind.speed,
+        lowTemp: payload.data.main.temp_min.toFixed(0),
+        highTemp: payload.data.main.temp_max.toFixed(0),
+        wind: payload.data.wind.speed,
         icon: payload.data.weather[0].icon,
         history: [
           ...state.history,

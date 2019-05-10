@@ -16,11 +16,11 @@ export default class App extends React.Component {
         <Search />
 
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-7">
             <CityInformation />
           </div>
 
-          <div className="col-md-6">
+          <div className="col-md-5">
             <SearchHistory />
           </div>
         </div>
