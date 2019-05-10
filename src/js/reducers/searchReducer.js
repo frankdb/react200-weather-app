@@ -12,7 +12,8 @@ const initialState = {
   searchInput: '',
   searchedCity: 'Enter a city',
   history: [],
-  icon: '01d'
+  icon: '01d',
+  error: false
 };
 
 export default function searchReducer(state = initialState, action) {
@@ -33,12 +34,21 @@ export default function searchReducer(state = initialState, action) {
         highTemp: payload.data.main.temp_max.toFixed(0),
         wind: payload.data.wind.speed,
         icon: payload.data.weather[0].icon,
+        error: false,
         history: [
           ...state.history,
           { searchedCity: payload.data.name, date: moment().format('l'), time: moment().format("h:mm:ss a") }
         ]
       }
     }
+
+    case 'GET_WEATHER_FAIL': {
+      return {
+        ...state,
+        error: true
+      }
+    }
+
     default: {
       return state;
     }
